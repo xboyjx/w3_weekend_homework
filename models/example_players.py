@@ -1,4 +1,4 @@
 from models.player import Player
 
-player1 = ("jacob", "rock")
-player2 = ("John", "paper")
+player1 = Player("jacob", "rock")
+player2 = Player("John", "rock")
