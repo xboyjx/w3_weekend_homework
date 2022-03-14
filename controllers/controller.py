@@ -1,6 +1,6 @@
 from flask import render_template, request
 from app import app
-from models.game import get_winner
+from models.game import Game
 from models.player import Player
 
 
@@ -8,5 +8,5 @@ from models.player import Player
 def winner_page(player1_choice, player2_choice):
     player1 = Player("Jacob", player1_choice)
     player2 = Player("John", player2_choice)
-    winner = get_winner(player1, player2)
+    winner = Game.get_winner(player1, player2)
     return render_template('index.html', title='Home', winner = winner)
